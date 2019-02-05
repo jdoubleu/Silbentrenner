@@ -10,6 +10,7 @@
   "dependencies": {
     "hyphenation.de": "^0.2.1",
     "hypher": "^0.2.5",
+    "lodash": "^4.17.11",
     "register-service-worker": "^1.5.2",
     "vue": "^2.5.22"
   },
@@ -20,6 +21,7 @@
     "@vue/cli-service": "^3.4.0",
     "@vue/eslint-config-standard": "^4.0.0",
     "babel-eslint": "^10.0.1",
+    "babel-plugin-lodash": "^3.3.4",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0",
     "vue-template-compiler": "^2.5.21"

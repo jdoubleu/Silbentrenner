@@ -1,5 +1,13 @@
 module.exports = {
   presets: [
-    '@vue/app'
+    [
+      '@vue/app',
+      {
+        'targets': { 'node': 6 }
+      }
+    ]
+  ],
+  plugins: [
+    'lodash'
   ]
 }
