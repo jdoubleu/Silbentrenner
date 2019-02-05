@@ -31,5 +31,6 @@ export default {
   height: 100vh;
   box-sizing: border-box;
   margin: 0;
+  font-size: inherit;
 }
 </style>
