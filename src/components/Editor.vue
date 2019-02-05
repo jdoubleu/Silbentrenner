@@ -7,13 +7,13 @@
 <script>
 export default {
   name: 'Editor',
-  data () {
+  data() {
     return {
       value: ''
     }
   },
   watch: {
-    value (value) {
+    value(value) {
       this.$emit('input', value)
     }
   }
