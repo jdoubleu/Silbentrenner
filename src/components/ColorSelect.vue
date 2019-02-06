@@ -22,11 +22,18 @@ export default {
     }
   },
   created() {
-    this.selected = Object.keys(this.colors)[0]
+    let savedSelection = localStorage.getItem('color')
+    if (!savedSelection) {
+      savedSelection = Object.keys(this.colors)[0]
+    }
+
+    this.selected = savedSelection
   },
   watch: {
     selected(name) {
       this.$emit('input', this.colors[name])
+
+      localStorage.setItem('color', name)
     }
   }
 }
