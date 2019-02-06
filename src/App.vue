@@ -17,6 +17,8 @@ import Editor from './components/Editor.vue'
 import { debounce } from 'lodash'
 import Hyphenator from './lib/Hyphenator'
 
+const outputPlaceholder = '<span style="color: #bcbcbc;">Ausgabe</span>'
+
 export default {
   name: 'app',
   components: {
@@ -25,7 +27,7 @@ export default {
   data() {
     return {
       text: '',
-      output: ''
+      output: outputPlaceholder
     }
   },
   beforeCreate() {
@@ -42,7 +44,7 @@ export default {
   },
   methods: {
     hyphenateOutput() {
-      this.output = this.$h(this.text)
+      this.output = this.text ? this.$h(this.text) : outputPlaceholder
     },
     handleOutputClick(e) {
       const target = e.target
