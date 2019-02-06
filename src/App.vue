@@ -3,6 +3,7 @@
     <header>
       <h1>Silbentrenner</h1>
       <span>language: <a href="https://github.com/jdoubleu/Silbentrenner#language">german</a></span>
+      <ColorSelect v-model="colors"/>
       <a href="https://github.com/jdoubleu/Silbentrenner">source code</a>
     </header>
     <main>
@@ -14,6 +15,7 @@
 
 <script>
 import Editor from './components/Editor.vue'
+import ColorSelect from './components/ColorSelect.vue'
 import { debounce } from 'lodash'
 import Hyphenator from './lib/Hyphenator'
 
@@ -22,17 +24,18 @@ const outputPlaceholder = '<span style="color: #bcbcbc;">Ausgabe</span>'
 export default {
   name: 'app',
   components: {
-    Editor
+    Editor,
+    ColorSelect
   },
   data() {
     return {
       text: '',
-      output: outputPlaceholder
+      output: outputPlaceholder,
+      colors: []
     }
   },
   beforeCreate() {
-    const h = new Hyphenator()
-    this.$h = h.hyphenText.bind(h)
+    this.$h = new Hyphenator(this.colors)
   },
   created() {
     this.debounceInput = debounce(this.hyphenateOutput, 400)
@@ -40,11 +43,15 @@ export default {
   watch: {
     text() {
       this.debounceInput()
+    },
+    colors(colors) {
+      this.$h.colors = colors
+      this.hyphenateOutput()
     }
   },
   methods: {
     hyphenateOutput() {
-      this.output = this.text ? this.$h(this.text) : outputPlaceholder
+      this.output = this.text ? this.$h.hyphenText(this.text) : outputPlaceholder
     },
     handleOutputClick(e) {
       const target = e.target

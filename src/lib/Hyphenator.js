@@ -1,8 +1,6 @@
 import Hypher from 'hypher'
 import german from 'hyphenation.de'
 
-const MonokaiColors = ['#272822', '#F92672', '#66D9EF', '#A6E22E', 'FD971F']
-
 function tokenizeText(text) {
   const reTextTokens = /(\s*[.,;:!?\-\s\n\t]\s*)/
   const rePunctuation = /[^.,;:?!\-\s\n\t]/
@@ -19,7 +17,7 @@ function tokenizeText(text) {
 class Hyphenator {
   constructor(colors) {
     this.h = new Hypher(german)
-    this.colors = colors || MonokaiColors
+    this.colors = colors
   }
 
   hyphenText(text) {
