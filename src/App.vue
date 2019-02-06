@@ -2,7 +2,7 @@
   <div id="app">
     <header>
       <h1>Silbentrenner</h1>
-      <span>language: german</span>
+      <span>language: <a href="https://github.com/jdoubleu/Silbentrenner#language">german</a></span>
       <a href="https://github.com/jdoubleu/Silbentrenner">source code</a>
     </header>
     <main>

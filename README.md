@@ -1,6 +1,26 @@
 # Silbentrenner
+Silbentrenner (*engl. Hyphenator*) is a simple web application written with [Vue.js](http://vuejs.org/) to hyphenate german words in a given text.
 
-## Project setup
+![Screenshot](./screenshot.png)
+
+It uses [hypher](https://github.com/bramstein/hypher/) to actually hyphenate the words.
+
+## Language
+At the moment this app only supports hyphenation for german language.
+However it is possible to change the language before building the app.
+Just install another [hyphenation pattern](https://github.com/bramstein/hyphenation-patterns) and import it in [`lib/Hyphenator.js`](./src/lib/Hyphenator.js).
+
+E.g:
+```javascript
+import english from 'hyphenation.en-gb'
+
+...
+this.h = new Hypher(english)
+...
+```
+
+## Development
+### Setup
 ```
 npm install
 ```
@@ -25,5 +45,5 @@ npm run test
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### License
+Silbentrenner is licensed under [MIT](./LICENSE)
