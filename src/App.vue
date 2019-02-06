@@ -71,13 +71,10 @@ body {
 
 #app .side {
   flex: 1;
+  padding: 1.5rem;
 }
 
 #app .side:first-child {
   border-right: 1px solid grey;
-}
-
-#output {
-  padding: 1.5rem;
 }
 </style>

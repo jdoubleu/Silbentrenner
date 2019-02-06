@@ -1,7 +1,5 @@
 <template>
-  <div id="editor">
-    <textarea v-model="value" placeholder="Eingabe" autofocus required></textarea>
-  </div>
+  <textarea v-model="value" id="editor" placeholder="Eingabe" autofocus required></textarea>
 </template>
 
 <script>
@@ -21,14 +19,13 @@ export default {
 </script>
 
 <style>
-#editor textarea {
+#editor {
+  background-color: #f6f6f6;
   border: 0;
   resize: none;
   outline: none;
-  background-color: #f6f6f6;
-  padding: 1.5rem;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   box-sizing: border-box;
   margin: 0;
   font-size: inherit;
