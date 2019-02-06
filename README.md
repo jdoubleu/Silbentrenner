@@ -1,4 +1,4 @@
-# silbentrenner
+# Silbentrenner
 
 ## Project setup
 ```
