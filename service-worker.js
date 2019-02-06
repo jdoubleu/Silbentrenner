@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Silbentrenner/precache-manifest.f1193c2e4238c021ce6fada7d68f7c62.js"
+  "/Silbentrenner/precache-manifest.d19346dac093188e853575dc41ee330c.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "silbentrenner"});
