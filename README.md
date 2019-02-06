@@ -34,6 +34,7 @@ npm run serve
 ```
 npm run build
 ```
+Please note that you have to change the [`publicPath`](https://cli.vuejs.org/config/#publicpath) option in [`vue.config.js`](./vue.config.js).
 
 ### Run your tests
 ```
