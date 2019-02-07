@@ -8,15 +8,15 @@ self.__precacheManifest = [
     "url": "/Silbentrenner/js/chunk-vendors.a4b71483.js"
   },
   {
-    "revision": "bbb56a2ca1026846b3f7",
-    "url": "/Silbentrenner/js/app.e71c0880.js"
+    "revision": "452044b1083de76b3ec4",
+    "url": "/Silbentrenner/js/app.22aabcb3.js"
   },
   {
-    "revision": "2476cf90ac55a245f0c5bb5f556b0442",
+    "revision": "3a4723baeff13ec6f7fb0c909185c13c",
     "url": "/Silbentrenner/index.html"
   },
   {
-    "revision": "bbb56a2ca1026846b3f7",
+    "revision": "452044b1083de76b3ec4",
     "url": "/Silbentrenner/css/app.25584ea1.css"
   }
 ];
