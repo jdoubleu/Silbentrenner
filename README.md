@@ -1,4 +1,4 @@
-# Silbentrenner
+# Silbentrenner [![Build Status](https://travis-ci.com/jdoubleu/Silbentrenner.svg?branch=master)](https://travis-ci.com/jdoubleu/Silbentrenner)
 Silbentrenner (*engl. Hyphenator*) is a simple web application written with [Vue.js](http://vuejs.org/) to hyphenate german words in a given text.
 
 ![Screenshot](./screenshot.png)
