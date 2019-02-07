@@ -43,7 +43,8 @@ class Hyphenator {
   }
 
   _colorizeToken(token) {
-    if (token.type !== 'word') {
+    if (token.type === 'punc') {
+      token.value = `<span style="color: ${this._getColor(0)}">${token.value}</span>`
       return token
     }
 
