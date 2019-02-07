@@ -9,7 +9,7 @@
 
 <script>
 const colors = {
-  'Monokai': ['#272822', '#F92672', '#66D9EF', '#A6E22E', 'FD971F'],
+  'Monokai': ['#272822', '#F92672', '#66D9EF', '#A6E22E', '#FD971F'],
   'blue-red': ['#00f', '#f00']
 }
 
