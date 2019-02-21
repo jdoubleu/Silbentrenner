@@ -23,6 +23,10 @@ class Hyphenator {
   hyphenText(text) {
     return tokenizeText(text)
       .map(this._hyphenToken.bind(this))
+  }
+
+  colorizeText(text) {
+    return this.hyphenText(text)
       .map(this._colorizeToken.bind(this))
       .map(token => token.value)
       .join('')
@@ -34,8 +38,16 @@ class Hyphenator {
       return token
     }
 
-    token.value = this.h.hyphenate(token.value)
-    return token
+    const hyphenatedTokenValue = this.h.hyphenate(token.value)
+
+    if (hyphenatedTokenValue.length === 1) {
+      return token
+    }
+
+    return {
+      type: 'word-hyphenated',
+      value: hyphenatedTokenValue
+    }
   }
 
   _getColor(index) {
@@ -43,15 +55,17 @@ class Hyphenator {
   }
 
   _colorizeToken(token) {
-    if (token.type === 'punc') {
-      token.value = `<span style="color: ${this._getColor(0)}">${token.value}</span>`
-      return token
+    switch (token.type) {
+      case 'punc':
+      case 'word':
+        token.value = `<span style="color: ${this._getColor(0)}">${token.value}</span>`
+        break
+      case 'word-hyphenated':
+        token.value = token.value.reduce(
+          (acc, hyphen, index) => `${acc}<span style="color: ${this._getColor(index)}">${hyphen}</span>`,
+          ''
+        )
     }
-
-    token.value = token.value.reduce(
-      (acc, hyphen, index) => `${acc}<span style="color: ${this._getColor(index)}">${hyphen}</span>`,
-      ''
-    )
 
     return token
   }

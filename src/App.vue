@@ -51,7 +51,7 @@ export default {
   },
   methods: {
     hyphenateOutput() {
-      this.output = this.text ? this.$h.hyphenText(this.text) : outputPlaceholder
+      this.output = this.text ? this.$h.colorizeText(this.text) : outputPlaceholder
     },
     handleOutputClick(e) {
       const target = e.target
