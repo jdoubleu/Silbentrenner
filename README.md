@@ -47,4 +47,4 @@ npm run lint
 ```
 
 ### License
-Silbentrenner is licensed under [MIT](./LICENSE)
+Silbentrenner is licensed under [Blue Oak Model License 1.0.0](./LICENSE)
