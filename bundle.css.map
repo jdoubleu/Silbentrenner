@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "file": "bundle.css",
+  "sources": [
+    "../src/components/Editor.svelte"
+  ],
+  "sourcesContent": [
+    "<script>\n    export let value = '';\n</script>\n\n<style>\n    #editor {\n        background-color: #f6f6f6;\n        border: 0;\n        resize: none;\n        outline: none;\n        width: 100%;\n        height: 100%;\n        box-sizing: border-box;\n        margin: 0;\n        font-size: inherit;\n    }\n</style>\n\n<textarea bind:value id=\"editor\" placeholder=\"Eingabe\"></textarea>\n"
+  ],
+  "names": [],
+  "mappings": "AAKI,OAAO,cAAC,CAAC,AACL,gBAAgB,CAAE,OAAO,CACzB,MAAM,CAAE,CAAC,CACT,MAAM,CAAE,IAAI,CACZ,OAAO,CAAE,IAAI,CACb,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,IAAI,CACZ,UAAU,CAAE,UAAU,CACtB,MAAM,CAAE,CAAC,CACT,SAAS,CAAE,OAAO,AACtB,CAAC"
+}
