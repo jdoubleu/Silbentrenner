@@ -34,6 +34,7 @@ npm run dev
 ```
 npm run build
 ```
+Please note that you may have to change the paths in [`index.html`](public/index.html).
 
 ### License
 Silbentrenner is licensed under [Blue Oak Model License 1.0.0](./LICENSE)
