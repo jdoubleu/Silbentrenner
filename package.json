@@ -12,6 +12,8 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
+    "hyphenation.de": "^0.2.1",
+    "hypher": "^0.2.5",
     "sirv-cli": "^0.4.4"
   },
   "scripts": {
