@@ -3,7 +3,6 @@ node_js:
   - "10"
 
 script:
-  - npm run lint -- --no-fix
   - npm run build
 
 deploy:
@@ -11,6 +10,6 @@ deploy:
   skip-cleanup: true
   github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
   keep-history: true
-  local-dir: ./dist
+  local-dir: ./public
   on:
     branch: master
