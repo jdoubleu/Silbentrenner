@@ -1,5 +1,5 @@
 # Silbentrenner [![Build Status](https://travis-ci.com/jdoubleu/Silbentrenner.svg?branch=master)](https://travis-ci.com/jdoubleu/Silbentrenner)
-Silbentrenner (*engl. Hyphenator*) is a simple web application written with [Vue.js](http://vuejs.org/) to hyphenate german words in a given text.
+Silbentrenner (*engl. Hyphenator*) is a simple web application written with [Svelte](https://svelte.dev) to hyphenate german words in a given text.
 
 ![Screenshot](./screenshot.png)
 
@@ -15,7 +15,7 @@ E.g:
 import english from 'hyphenation.en-gb'
 
 ...
-this.h = new Hypher(english)
+const h = new Hypher(english)
 ...
 ```
 
@@ -27,23 +27,12 @@ npm install
 
 ### Compiles and hot-reloads for development
 ```
-npm run serve
+npm run dev
 ```
 
 ### Compiles and minifies for production
 ```
 npm run build
-```
-Please note that you have to change the [`publicPath`](https://cli.vuejs.org/config/#publicpath) option in [`vue.config.js`](./vue.config.js).
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
 ```
 
 ### License
