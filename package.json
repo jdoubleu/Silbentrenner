@@ -16,7 +16,7 @@
   "dependencies": {
     "hyphenation.de": "^0.2.1",
     "hypher": "^0.2.5",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.21",
     "sirv-cli": "^0.4.4"
   },
   "scripts": {
